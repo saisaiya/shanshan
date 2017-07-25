@@ -1,0 +1,33 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body {
+	font: 16px "microsoft yahei", Arial, Helvetica, sans-serif,"宋体","黑体";
+}
+ul{
+	list-style: none;
+}
+a{cursor: pointer;}
+.mui-bar{
+	height:43px;
+	line-height: 43px;
+	background:#886F5D;
+}
+.mui-bar a,.mui-bar h1{
+	color:#fff;
+}
+.mui-bar .mui-icon {
+    font-size: 16px;
+    position: relative;
+    z-index: 20;
+    padding-top: 14px;
+     padding-bottom: 0px; 
+}
+.mui-bar-nav.mui-bar .mui-icon {
+    padding-left: 15px;
+}
+.mui-scroll{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+    margin:0;
+}

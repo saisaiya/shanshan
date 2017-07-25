@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>产品中心</title>
+		<script src="js/mui.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/deliver.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+			ul li img{
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主页面容器 -->
+		<div class="mui-inner-wrap">
+			<!-- 主页面标题 -->
+			<div class="mui-content mui-scroll-wrapper" style="overflow: auto;">
+				<div class="mui-scroll">
+					<ul class="mypict">
+						<li class="lf">
+							<a  href="详情页.html"><img src="img/x01.png"/></a>
+							<p class="product-title">Firs/杉杉家纺</p>
+							<p class="detail-info">欧式水洗真丝四件套床上用品全棉贡缎 函数婚庆床品套件</p>
+							<p class="pprice">￥3280.00</p>
+							<p class="zan-comm"><a class="collection">132</a><a>21</a></p>
+						</li>
+						<li class="rt">
+							<a  href="详情页.html"><img src="img/x02.jpg"/></a>
+							<p class="product-title">Firs/杉杉家纺</p>
+							<p class="detail-info">欧式水洗真丝四件套床上用品全棉贡缎 函数婚庆床品套件</p>
+							<p class="pprice">￥3129.00</p>
+							<p class="zan-comm"><a class="collection">132</a><a>21</a></p>
+						</li>
+						<li class="lf">
+							<a  href="详情页.html"><img src="img/x03.png"/></a>
+							<p class="product-title">Firs/杉杉家纺</p>
+							<p class="detail-info">欧式水洗真丝四件套床上用品全棉贡缎 函数婚庆床品套件</p>
+							<p class="pprice">￥2220.00</p>
+							<p class="zan-comm"><a class="collection">132</a><a>21</a></p>
+						</li>
+						<li class="rt">
+							<a href="详情页.html"><img src="img/x04.jpg"/></a>
+							<p class="product-title">Firs/杉杉家纺</p>
+							<p class="detail-info">欧式水洗真丝四件套床上用品全棉贡缎 函数婚庆床品套件</p>
+							<p class="pprice">￥2199.00</p>
+							<p class="zan-comm"><a class="collection">132</a><a>21</a></p>
+						</li>
+						<li class="lf">
+							<a href="详情页.html"><img src="img/x05.jpg"/></a>
+							<p class="product-title">Firs/杉杉家纺</p>
+							<p class="detail-info">欧式水洗真丝四件套床上用品全棉贡缎 函数婚庆床品套件</p>
+							<p class="pprice">￥2220.00</p>
+							<p class="zan-comm"><a class="collection">132</a><a>21</a></p>
+						</li>
+						<li class="rt">
+							<a href="详情页.html"><img src="img/x06.jpg"/></a>
+							<p class="product-title">Firs/杉杉家纺</p>
+							<p class="detail-info">欧式水洗真丝四件套床上用品全棉贡缎 函数婚庆床品套件</p>
+							<p class="pprice">￥2199.00</p>
+							<p class="zan-comm"><a class="collection">132</a><a>21</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(".collection").click(function(){
+					if($(this).hasClass("collectioned")){
+						return;
+					}else{
+						$(this).removeClass("collection");
+						$(this).addClass("collectioned");
+						$(this).text(parseInt($(this).text())+1);
+					}
+
+
+				})
+			})
+		</script>
+	</body>
+</html>

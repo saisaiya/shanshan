@@ -1,0 +1,95 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body {
+	font: 16px "microsoft yahei", Arial, Helvetica, sans-serif,"宋体","黑体";
+}
+ul{
+	list-style: none;
+}
+.lf{float:left;}.rt{float:right;}
+a{cursor: pointer;}
+.mui-bar{
+	height:43px;
+	line-height: 43px;
+	background:#886F5D;
+}
+.mui-bar a,.mui-bar h1{
+	color:#fff;
+}
+.mui-bar .mui-icon {
+    font-size: 16px;
+    position: relative;
+    z-index: 20;
+    padding-top: 14px;
+     padding-bottom: 0px; 
+}
+.mui-bar-nav.mui-bar .mui-icon {
+    padding-left: 15px;
+}
+.describeInfo{
+	padding:5px 14px 5px 14px;
+	border-bottom:2px solid #CCCCCC;
+}
+.describeInfo h4{
+	font-size: 16px;
+	font-weight: 300;
+	color:#454545;
+}
+.mui-content{
+	background-color: #F7F5F6;
+}
+.scanRecoder,.listRocode{
+	width:100%;
+	padding:15px 10px 0 10px;
+}
+.scanRecoder>p{
+	font-size: 14px;
+	color:#404040;
+	margin-bottom: 0px;
+}
+.textColor,.scanRecoder>p a{
+	color:#F76363;
+}
+.listRocode li{
+	overflow: hidden;
+	height:25px;
+	line-height:25px;
+	font-size:15px;
+}
+.listRocode li span:last-child{
+	color:#999;
+}
+.modal-dialog{
+	width:95%;
+}
+.modal-content {
+    margin-top: 35px;
+    height: 30%;
+    text-align: center;
+    padding: 15px;
+    padding-bottom:30px;
+    background-color: #886F5D;
+}
+.modal-content p{
+	text-align: center;
+	color:#EFEBE9;
+	font-size: 16px;
+}
+.closeX{
+	width:20px;
+	height:20px;
+	text-align: center;
+	border-radius: 50%;
+	position:absolute;
+	top:-10px;
+	right:-10px;
+	background-color: #fff;
+}
+.feeBack{
+	padding:2px;
+	margin-bottom:10px;
+}
+.btn-submit{
+	color:#EFEBE9;
+	padding-right:3%;
+}

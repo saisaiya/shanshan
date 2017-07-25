@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>产品图片</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <style>
+        *{margin:0px;}
+        html, body {
+            position: relative;
+            height: 100%;}
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-wrapper{
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide img{
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-wrapper {
+            transition-timing-function: linear;
+        }
+        .swiper-wrapper{
+            transition-timing-function:linear ;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/01.jpg"></div>
+            <div class="swiper-slide"><img src="img/02.jpg"></div>
+            <div class="swiper-slide"><img src="img/03.jpg"></div>
+            <div class="swiper-slide"><img src="img/04.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper1', {
+        loop: true,
+        pagination : '.swiper-pagination',
+        paginationType : 'custom',
+    })
+</script>
+</html>

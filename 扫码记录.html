@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>扫码记录</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/scanInfo.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 主页面容器 -->
+<div class="mui-inner-wrap">
+    <div class="mui-content mui-scroll-wrapper" style="overflow: auto;">
+        <div class="mui-scroll">
+            <div class="scanRecoder">
+                <p id="disbtn">
+                    此商品已经被扫描<span class="textColor">三次</span>以上,请谨慎消费<span class="rt"><a data-toggle="modal" data-target=".bs-example-modal-sm">立即反馈</a>
+							</span>
+                </p>
+            </div>
+            <ul class="listRocode">
+                <li><span class="lf textColor">第一次扫码</span><span class="rt">2016-09-10 江苏省南京市鼓楼区</span></li>
+                <li><span class="lf textColor">第二次扫码</span><span class="rt">2016-09-10 江苏省南京市鼓楼区</span></li>
+                <li><span class="lf textColor">第三次扫码</span><span class="rt">2016-09-10 江苏省南京市鼓楼区</span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Small modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <p>反馈信息</p>
+                <div onclick="disapp()" class="closeX">X</div>
+                <textarea class="feeBack" rows="8" maxlength="50" placeholder="请输入反馈信息"></textarea>
+                <a class="rt btn-submit">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    function disapp(){
+        $(".bs-example-modal-sm").modal("hide");
+    }
+</script>
+
+</html>

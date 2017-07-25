@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>验证码</title>
+    <link rel="stylesheet" href="css/examCode.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <style>
+        body{
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .overlay{
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            opacity:0.9;
+            z-index:9999999;
+            background-color:#313131;
+            padding:40% 0 0 0;
+        }
+        .floor,.floor-t{width:100%;text-align: center;}
+        .floor>img{width:70%;}
+        .floor-t img{width:33%;}
+        .srzfmm_box form input{
+            width:22%;
+            /*border-radius: 30px;*/
+            border:1px solid #E5C783;
+        }
+        .right-info img{
+            width:90px;
+            height:90px;
+        }
+        .srzfmm_box input{
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+    <p class="test-info">输入验证码</p>
+    <div class="inputs_box">
+        <div class="srzfmm_box">
+            <form action="" id="myForm">
+                <input id="0" class="borderColor" maxlength="1" readonly="readonly"/>
+                <input id="1" maxlength="1" readonly="readonly"/>
+                <input id="2" maxlength="1" readonly="readonly"/>
+                <input id="3" maxlength="1" readonly="readonly"/>
+                <!--<input id="myinputs" type="tel" maxlength="4" onkeyup="textcode();" placeholder="请输入四位数字验证码">-->
+            </form>
+        </div>
+        <div class="right-info" id="right" style="display:none;">
+            <img src="img/right.png"/>
+        </div>
+        <div class="error-info" id="error"></div>
+        <p class="right-error"></p>
+    </div>
+    <div class="numb_box clearfix" id="numb_box" >
+        <div class="xiaq_tb">
+            <img src="img/jftc_14.jpg" height="10">
+        </div>
+        <ul class="nub_ggg">
+            <li><a >1</a></li>
+            <li><a class="zj_x">2</a></li>
+            <li><a >3</a></li>
+            <li><a >4</a></li>
+            <li><a class="zj_x">5</a></li>
+            <li><a >6</a></li>
+            <li><a >7</a></li>
+            <li><a class="zj_x">8</a></li>
+            <li><a >9</a></li>
+            <li class="cancelt"><span id="cancel">取消</span></li>
+            <li><a class="zj_x ">0</a></li>
+            <li><span class="del" > <img src="img/jftc_18.jpg"></span></li>
+        </ul>
+    </div>
+    <div class="overlay" style="display:block;">
+        <div class="floor">
+            <img src="img/ts.png">
+        </div>
+        <div class="floor-t">
+            <a id="iknow"><img src="img/know.png"></a>
+        </div>
+    </div>
+</body>
+<script>
+    function textcode(){
+        if($("#myinputs").val().length==4&&$("#myinputs").val()==8888){
+            $(".right-info").css("display","block");
+            var tt=setTimeout(function(){
+                window.location.href="扫码记录.html";
+                $(".rightInfo").css("display","none");
+            },500)
+        }else if($("#myinputs").val().length==4 && $("#myinputs").val()!=8888){
+            $("#myinputs").attr("placeholder","请输入正确验证码");
+            $("#myinputs").val("");
+        }
+    }
+    $(function(){
+        $(".xiaq_tb").click(function(){
+            $(".numb_box").slideUp(500);
+        });
+        $("#cancel").click(function(){
+            $(".numb_box").slideUp(500);
+        })
+        $("#myForm").click(function(){
+            $(".numb_box").slideDown(500);
+        });
+        var txts = $("#myForm input");
+        var id=txts[0].id;
+        $(".nub_ggg li a").bind('click',function(){
+            if($("#"+id).val()==""&&id<=3){
+                $("#"+id).val($(this).text());
+                id++;
+                $("#"+id).addClass('borderColor').siblings().removeClass('borderColor');
+                if($("#0").val()!=""&&$("#1").val()!=""&&$("#2").val()!=""&&$("#3").val()!=""){
+                    document.getElementById("right").style.display="block";
+                    var t=setTimeout(function(){
+                        window.location.href="扫码记录.html";
+                        $(".ftc_wzsf").hide(300);
+                        $("#0").val("");
+                        $("#1").val("");
+                        $("#2").val("");
+                        $("#3").val("");
+                        $("#0").addClass('borderColor').siblings().removeClass('borderColor');
+                        document.getElementById("right").style.display="none";
+                        id=0;
+                    },1000)
+                }
+            }
+
+        })
+        var index=0;
+        $(".del").bind("click",function(){
+            var txts = $("#myForm input");
+            for(var j=0;j<txts.length;j++){
+                if($("#"+j).val()==""){
+                    index=j-1;
+                    break;
+                }
+            }
+            if(index<=3&&index>=0){
+                $("#"+index).val("");
+
+                id=index;
+                index--;
+                $("#"+id).addClass('borderColor').siblings().removeClass('borderColor');
+            }
+        })
+        $("#iknow").click(function(){
+            $(".overlay").fadeOut(300);
+        })
+    })
+</script>
+</html>

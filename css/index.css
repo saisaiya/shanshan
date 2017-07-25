@@ -1,0 +1,10 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body {
+	font: 16px "microsoft yahei", Arial, Helvetica, sans-serif,"宋体","黑体";
+	background:url("../img/index01.jpg") no-repeat;
+	background-size: cover;
+}
+a{cursor: pointer;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}

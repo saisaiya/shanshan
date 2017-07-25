@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>用户评论</title>
+		<script src="js/mui.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/consumerInfo.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+			@media screen and (min-width: 320px) and (max-width: 370px) {
+				.tit{
+					font-size: 12px;
+				}
+			}
+			.stras li{
+				background: url("img/star02.png")  no-repeat center;background-size: 24px 24px;cursor:pointer;
+			}
+			.modal-content .stras li{display: inline-block; padding:0px;margin:0px;width:25px;height:25px;}
+			.modal-content .stras li a{display:block;width:24px;height:20px;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5}
+			.modal-content li.current-rating{background:url( img/redstar.png) no-repeat center;background-size: 24px 24px;cursor:pointer;
+				background-size: 24px 24px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-inner-wrap">
+			<!-- 主页面标题 -->
+			<div class="mui-content mui-scroll-wrapper" style="overflow: auto;">
+				<div class="mui-scroll" id="comments">
+					<div style="width:100%;height:180px;padding: 12px 10px 0px 10px;">
+						<ul>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/redstar.png" /></li>
+									<li><img src="img/redstar.png" /></li>
+									<li><img src="img/redstar.png" /></li>
+									<li><img src="img/redstar.png" /></li>
+									<li><img src="img/redstar.png" /></li>
+								</ul>
+								<span style="font-size: 12px;color:#FF0000;">12446人评论</span>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div id="demo1" class="mui-progressbar">
+									<span></span>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div id="demo2" class="mui-progressbar">
+									<span></span>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div id="demo3" class="mui-progressbar">
+									<span></span>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div id="demo4" class="mui-progressbar">
+									<span></span>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div id="demo5" class="mui-progressbar">
+									<span></span>
+								</div>
+							</li>
+						</ul>
+						<span class="rt makeComment" style="display:block;">
+						<a data-toggle="modal" data-target=".bs-example-modal-sm"><img src="img/botton3.png"></a>
+					</span>
+					</div>
+
+					<div class="detailComments" id="detailComments">
+						<ul>
+							<li>
+								<p class="tit">质量非常好,面料柔软舒适，摸起来很舒服！<span class="rt">16-09-28</span></p>
+								<div class="com-details">
+									<ul class="myStars">
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+									</ul>
+									<p class="comm-info">
+										<span>质量非常好，面料柔软舒适，摸起来很舒服，卖家发货及时，客服非常热情，包装比较完美，满意！</span>
+									<p class="comm-text">Firs/杉杉纯棉老粗布床单三件套全棉布单/双人凉席1.5米1.8被单</p>
+									<p class="comm-data">
+										<span class="lt">扫码日期</span>
+										<span class="lt dataInfo">16-09-28</span>
+										<span class="rt">1.8km</span>
+									</p>
+									</p>
+								</div>
+							</li>
+							<li>
+								<p class="tit">质量非常好,面料柔软舒适，摸起来很舒服！<span class="rt">16-09-28</span></p>
+								<div class="com-details">
+									<ul class="myStars">
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+									</ul>
+									<p class="comm-info">
+										<span>质量非常好，面料柔软舒适，摸起来很舒服，卖家发货及时，客服非常热情，包装比较完美，满意！</span>
+									<p class="comm-text">杉杉纯棉老粗布床单三件套全棉布单/双人凉席1.5米1.8被单</p>
+									<p class="comm-data">
+										<span class="lt">扫码日期</span>
+										<span class="lt dataInfo">16-09-28</span>
+										<span class="rt">1.8km</span>
+									</p>
+									</p>
+								</div>
+							</li>
+							<li>
+								<p class="tit">质量非常好,面料柔软舒适，摸起来很舒服！<span class="rt">16-09-28</span></p>
+								<div class="com-details">
+									<ul class="myStars">
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+									</ul>
+									<p class="comm-info">
+										<span>质量非常好，面料柔软舒适，摸起来很舒服，卖家发货及时，客服非常热情，包装比较完美，满意！</span>
+									<p class="comm-text">Firs/杉杉纯棉老粗布床单三件套全棉布单/双人凉席1.5米1.8被单</p>
+									<p class="comm-data">
+										<span class="lt">扫码日期</span>
+										<span class="lt dataInfo">16-09-28</span>
+										<span class="rt">1.8km</span>
+									</p>
+									</p>
+								</div>
+							</li>
+							<li>
+								<p class="tit">质量非常好，很好很好很好很<span class="rt">16-09-28</span></p>
+								<div class="com-details">
+									<ul class="myStars">
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+										<li><img src="img/redstar.png" /></li>
+									</ul>
+									<p class="comm-info">
+										<span>质量非常好，面料柔软舒适，摸起来很舒服，卖家发货及时，客服非常热情，包装比较完美，满意！</span>
+									<p class="comm-text">Firs/杉杉纯棉老粗布床单三件套全棉布单/双人凉席1.5米1.8被单</p>
+									<p class="comm-data">
+										<span class="lt">扫码日期</span>
+										<span class="lt dataInfo">16-09-28</span>
+										<span class="rt">1.8km</span>
+									</p>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</div>
+
+			</div>
+			<!-- Small modal -->
+
+			<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div style="position: relative;width:100%;margin:0 auto;">
+							<ul class="stras" id="stras">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+
+						</div>
+
+						<p class="touch-star">轻按星星来评分</p>
+						<ul class="inputs">
+							<li>
+								内容：<textarea id="" cols="5" rows="5" maxlength="100"></textarea>
+							</li>
+						</ul>
+						<p class="sub-btn">
+							<a onclick="disapp()">提交</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			(function() {
+				mui("#demo1").progressbar({
+					progress: 90
+				}).show();
+				mui("#demo2").progressbar({
+					progress: 20
+				}).show();
+				mui("#demo3").progressbar({
+					progress: 25
+				}).show();
+				mui("#demo4").progressbar({
+					progress: 10
+				}).show();
+				mui("#demo5").progressbar({
+					progress: 8
+				}).show();
+			})();
+ 
+			$(document).ready(function(){
+
+				var stars = $("#stras> li");
+
+				stars.each(function(i){
+					$(stars[i]).click(function(e){
+						for(var j=0;j<=i;j++){
+							$(stars[j]).addClass("current-rating");
+						}
+						if(i<4){
+							for(var index =i+1;index<=4;index++){
+								$(stars[index]).removeClass("current-rating");
+							}
+						}
+						return stopDefault(e);
+					});
+				});
+			});
+			function stopDefault(e){
+				if(e && e.preventDefault)
+					e.preventDefault();
+				else
+					window.event.returnValue = false;
+				return false;
+			};
+
+			function disapp(){
+				$(".bs-example-modal-sm").modal('hide');
+			}
+		</script>
+	</body>
+
+</html>

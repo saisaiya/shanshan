@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+	<title>产品信息</title>
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin/default-skin.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="css/iscroll_push.css"> -->
+
+	<link rel="stylesheet" href="css/productsInfo.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<!-- <script type="text/javascript" src="js/iscroll_push.js"></script> -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="js/photoswipe.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+	<!-- <script type="text/javascript">
+	var myScroll,
+					upIcon = $("#up-icon"),
+					downIcon = $("#down-icon");
+	function loaded () {
+		myScroll = new IScroll('#wrapper', { probeType: 3, mouseWheel: true ,preventDefault: false });
+
+		myScroll.on("scroll",function(){
+			var y = this.y,
+					maxY = this.maxScrollY - y,
+					downHasClass = downIcon.hasClass("reverse_icon");
+
+			if(y >= 40){
+				!downHasClass && downIcon.addClass("reverse_icon");
+				return "";
+			}else if(y < 40 && y > 0){
+				downHasClass && downIcon.removeClass("reverse_icon");
+				return "";
+			}
+		});
+		myScroll.on("slideDown",function(){
+			if(this.y > 40){
+				window.location.href="泸州醇首页.html"
+				upIcon.removeClass("reverse_icon")
+			}
+		});
+	}
+</script> -->
+</head>
+<body>
+<!-- <div id="wrapper"> -->
+	<div id="scroller">
+		<div id = "scroller-content">
+				<div class="describeInfo">
+					<h4>产品描述</h4>
+					<p>
+						2016新款-----超高档天丝贡缎大提花面料加高档棉被里与床单，它具丝的的柔软、顺滑、光泽，做工精细，柔软舒适，吸湿透气，花样独特典雅，尽显豪华尊贵，自用，送礼两相宜！
+					</p>
+				</div>
+				<div id="lists">
+					<p class="ptitle">
+						<span>产品名称</span>
+						<span>超高档天丝贡缎大提花床单</span>
+					</p>
+					<p class="ptitle">
+						<span>商品条码</span>
+						<span>2392922222193322132233</span>
+					</p>
+					<p class="ptitle">
+						<span>产品规格</span>
+						<span>2.0床 245*270cm</span>
+					</p>
+					<p class="ptitle">
+						<span>产品批次</span>
+						<span>20160910CJ01YG01</span>
+					</p>
+					<p class="ptitle">
+						<span>生产日期</span>
+						<span>2016-09-10</span>
+					</p>
+				</div>
+					 
+				<div class="number">
+					<p class="telnum">
+						<span>电话</span>
+						<span>4008881573 <img src="img/phone.jpg"></span>
+					</p>
+					<a class="buyer" href="buy.html" >正品购买</a>
+				</div>
+				<div>
+					<div id="myinputscode">
+						<p class="test-info">输入校验码</p>
+							<div class="inputs_box">
+								<form id="myForm">
+									<input id="0" maxlength="1" readonly="readonly" />
+									<input id="1" maxlength="1" readonly="readonly"/>
+									<input id="2" maxlength="1" readonly="readonly"/>
+									<input id="3" maxlength="1" readonly="readonly"/>
+									<!--<input id="myinputs" type="tel" maxlength="4" onkeyup="textcode();" placeholder="请输入四位数字验证码">-->
+								</form>
+							</div>
+					</div>
+				</div>
+
+					<div class="rightInfo" style="display:none;">
+						<img src="img/right.png">
+					</div>
+			<div id="showResult"  style="display:none;">
+				<div class="codeInfo" id="codeInfo" >
+					<p class="recode">扫码记录</p>
+					<span class="details">您购买的是由四川泸州醇酒业营销有限公司生产的产品.</span>
+					<div id="coderecoder">
+						<p class="warningInfo">
+							<span>此商品已经被扫码<span class="textColor">三次</span>以上，请谨慎消费！</span>
+							<a class="rt" data-toggle="modal" data-target=".bs-example-modal-sm">立即反馈</a>
+						</p>
+						<ul class="takeNotes">
+							<li><span class="textColor">第一次扫码</span><span class="rt">2016-09-12 12:00:00 江苏省南京市鼓楼区</span></li>
+							<li><span class="textColor">第二次扫码</span><span class="rt">2016-09-12 12:00:00 江苏省南京市鼓楼区</span></li>
+							<li><span class="textColor">第三次扫码</span><span class="rt">2016-09-12 12:00:00 江苏省南京市鼓楼区</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="expmenu" >
+					<li>
+						<div class="header" id="haop">
+							<span class="labels" >商品好评度</span>
+							<span class="arrow down"></span>
+						</div>
+						<div class="starsBox">
+							<ul class="myStars">
+								<li><img src="img/redstar.png" /></li>
+								<li><img src="img/redstar.png" /></li>
+								<li><img src="img/redstar.png" /></li>
+								<li><img src="img/redstar.png" /></li>
+								<li><img src="img/starthalf.png"/></li>
+							</ul>
+							<span class="numbers" ><span class="textColor">12446</span >人评论</span>
+						</div>
+						<ul class="menu">
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+									</div>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+									</div>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+									</div>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+									</div>
+								</div>
+							</li>
+							<li>
+								<ul class="myStars">
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star02.png" /></li>
+									<li><img src="img/star01.png" /></li>
+								</ul>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+									</div>
+								</div>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<div class="header">
+							<span class="labels">营业执照</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu">
+							<div class="my-gallery" data-pswp-uid="1">
+								<figure><span>
+								  <a href="img/zz1.jpg" data-size="670x712">
+								  <img style="width:80%;" src="img/zz.jpg">
+								  </a></span>
+								</figure>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<div class="header">
+							<span class="labels">检验报告</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu">
+							<div class="my-gallery" data-pswp-uid="1">
+								<figure><span>
+								  <a href="img/bg1.jpg" data-size="670x712">
+								  <img style="width:80%;" src="img/bg.jpg">
+								  </a></span>
+								</figure>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<div class="header" id="intro">
+							<span class="labels">公司简介</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu">
+							<li style="padding-top:5px;padding-bottom:5px;">
+								<p class="textinfo">
+									杉杉家纺是一家专业经营家用纺织品，集研发、设计、销售于一体的纺织品企业；是国内家喻户晓的家纺品牌，运用国际领先品牌运营模式并在国内形成强大的销售网络。
+								</p>
+								<p class="textinfo">
+									杉杉企业是以资本为纽带组合而成的多产业的大型企业集群，是有杉杉投资控股有限公司名下的全资、控股、参股和无形资产（品牌）托权管理的所有企业制度建立起来的控股公司是这以企业共同体的最高代表，控股公司董事局是控股公司的最高决策机构。杉杉企业积极倡导各级经营者持股，使责任机制和利益机制产生良性的互动作用。
+								</p> 
+								<p class="textinfo">
+									杉杉集团是杉杉企业中心以服装、服饰、纺织品等产业为核心、以品牌经营为根本、努力拓展时尚产业领域，进一步加强国际合作，致力于成为国内时尚产业的领袖企业。
+								</p> 
+								<p class="textinfo">
+									杉杉秉承“正直、负责、创新、奉献”的共同价值观，积极参与地方经济发展，关爱员工健康与职业发展，关注和支持贫困弱势群体、青少年教育、自然环保等事业。在慈善、公益等方面杉杉累计向社会赞助、捐赠总价值逾3亿元，先后入选胡润中国企业慈善榜、《南方周末》中国企业社会贡献榜、社会责任榜。
+								</p> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+				<div class="attention">
+						<p class="payAttention">关注公众号</p>
+						<div class="erweiCode">
+							<img src="img/erweicode.png">
+						</div>
+						<p class="textdescription">长按二维码关注杉杉家纺</p>
+						<a class="btnattention">点此关注杉杉家纺</a>
+				</div>
+		</div>
+	</div>
+<!-- </div> -->
+<div class="numb_box clearfix" id="numb_box" style="display:none;">
+	<div class="xiaq_tb">
+		<img src="img/jftc_14.jpg" height="10">
+	</div>
+	<ul class="nub_ggg">
+		<li><a >1</a></li>
+		<li><a class="zj_x">2</a></li>
+		<li><a >3</a></li>
+		<li><a >4</a></li>
+		<li><a class="zj_x">5</a></li>
+		<li><a >6</a></li>
+		<li><a >7</a></li>
+		<li><a class="zj_x">8</a></li>
+		<li><a >9</a></li>
+		<li class="cancelt"><span id="cancel">取消</span></li>
+		<li><a class="zj_x ">0</a></li>
+		<li><span class="del" > <img src="img/jftc_18.jpg"></span></li>
+	</ul>
+</div>
+	<!-- Small modal -->
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<p>反馈信息</p>
+				<div onclick="disapp()" class="closeX">X</div>
+				<textarea class="feeBack" rows="8" maxlength="50" placeholder="请输入反馈信息"></textarea>
+				<a class="rt btn-submit" onclick="disapp()">提交</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+			<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+			<div class="pswp__ui pswp__ui--hidden">
+				<div class="pswp__top-bar">
+					<!--  Controls are self-explanatory. Order can be changed. -->
+					<div class="pswp__counter"></div>
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+					<!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
+					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+					<!-- element will get class pswp__preloader--active when preloader is running -->
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+							<div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+					<div class="pswp__share-tooltip"></div>
+				</div>
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+				</button>
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+				</button>
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/downAndup.js"></script>
+<script type="text/javascript" src="js/code-recode.js"></script>
+<script type="text/javascript" src="js/changesize.js"></script>
+
+</html>

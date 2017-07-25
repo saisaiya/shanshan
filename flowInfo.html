@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>流通信息</title>
+	<link rel="stylesheet" href="css/flowInfo.css" />
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			var fadein=function(){
+				var index=0;
+				var fadeinbox=$(".fadein");
+				function showbox(){
+					if(index>=0&&index<fadeinbox.length){
+						fadeinbox[index].style.opacity="1";
+					}else{
+						clearInterval(boxtimer);
+					}
+					index++;
+				}
+				var boxtimer=setInterval(showbox,800);
+			}
+			fadein();
+		})
+	</script>
+	<style>
+		#detailInfo{
+			padding:0 0 0 20px;
+			color:#888887;
+			font-size: 14px;
+		}
+		img{
+			width:60px;
+			height:60px;
+		}
+		.first img{
+
+			vertical-align: bottom;
+			display: block;
+		}
+		.process img{
+			width:60px;
+			height:60px;
+			margin-right: 8%;
+			padding:10px 0 0 0;
+			border:none;
+		}
+		.textInfo span{
+			margin-right:20px;
+		}
+		.textInfo span:last-child{
+			margin-right: 0;
+		}
+		.second{
+			width:50%;
+			display: inline-block;
+		}
+		.second img{
+			margin-right:5px;
+		}
+		.second span{
+			display: block;
+		}
+		.fadein{
+			opacity: 0;
+			filter:Alpha(opacity=0);
+		}
+	</style>
+</head>
+<body>
+	<p class="firstTime">首次查询时间：2016-09-28</p>
+    <div id="detailInfo">
+		<p class="first fadein">
+			<img src="img/start1.png">
+			<span>杉杉家纺南通总公司</span>
+		</p>
+		<p class="fadein">
+			<img src="img/arrdown.png">
+		</p>
+		<div style="overflow: hidden">
+			<p class="second lf fadein">
+				<img src="img/start2.png">
+				<img src="img/arrright.png">
+				<span>江苏省南京市中心</span>
+			</p>
+			<p class="second rt fadein">
+				<img src="img/start3.png">
+				<span>江苏省南通市分公司</span>
+			</p>
+		</div>
+		<p style="width:50%;margin-left:50%;" class="fadein">
+			<img src="img/arrdown.png">
+		</p>
+		<div style="overflow: hidden">
+
+			<p class="second rt fadein">
+				<img src="img/start5.png">
+				<span>江苏省南通市分公司</span>
+			</p><p class="second lf fadein">
+			<img src="img/start4.png">
+			<img src="img/arrleft.png">
+			<span>杉杉家纺官方专卖店</span>
+		</p>
+		</div>
+		<p class="fadein">
+			<img src="img/arrdown.png">
+		</p>
+		<p class="first fadein" style="padding-top:10px;">
+			<img src="img/start6.png">
+			<span style="color:#FF7575;">消费者首次扫码</span>
+		</p>
+	</div>
+
+</body>
+</html>

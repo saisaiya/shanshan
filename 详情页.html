@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>杉杉家纺</title>
+		<script src="js/mui.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/swiper.css">
+		<link rel="stylesheet" href="css/detailsInfo.css" />
+		<link rel="stylesheet" href="css/touchTouch.css">
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+		.current img {
+		    border: 1px solid #FF9090;
+		}
+	 	#small li{
+			box-sizing: border-box;
+		}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主页面容器 -->
+		<div class="mui-inner-wrap">
+			<!-- 主页面标题 -->
+			<div class="mui-content mui-scroll-wrapper" style="overflow: auto;">
+				<div class="mui-scroll">
+					<p class="title-price">
+						<span class="lf">Firs/杉杉家纺</span>
+						<span class="rt">￥3280.00</span>
+						<p class="detailInfo">
+							欧式水洗真丝四件套床上用品全棉贡缎 韩式婚庆床品套件欧式水洗真丝四件套床上用品全棉贡缎 韩式婚庆床品套件欧式水洗真丝四件套
+						</p>
+						<div class="my-pict">
+							<div class="swiper-container">
+							    <div class="swiper-wrapper" id="thumbs">
+							        <a class="swiper-slide" href="img/11-m.jpg"><img src="img/11-m.jpg"/></a>
+							        <a class="swiper-slide" href="img/12-m.jpg"><img src="img/12-m.jpg"/></a>
+							        <a class="swiper-slide" href="img/13-m.jpg"><img src="img/13-m.jpg"/></a>
+							        <a class="swiper-slide" href="img/14-m.jpg"><img src="img/14-m.jpg"/></a>
+							    </div>
+							</div>
+							<ul id="small">
+								<li class="lf current"><a><img src="img/11.jpg"/></a></li>
+								<li><a><img src="img/12.jpg"/></a></li>
+								<li><a><img src="img/13.jpg"/></a></li>
+								<li class="rt"><a><img src="img/14.jpg"/></a></li>
+							</ul>
+						</div>
+						<div class="size-color">
+							<p class="size">尺寸</p>
+							<ul class="choseSize">
+								<li class="unbuy">1.5M</li>
+								<li class="unbuy">2M</li>
+								<li class="unbuy">2.5M</li>
+							</ul>
+							<p class="line"></p>
+							<p class="size">颜色</p>
+							<ul class="choseColor">
+								<li style="background-color: #766461;"></li>
+								<li style="background-color: #AE9D96;"></li>
+								<li style="background-color: #FF9090;"></li>
+								<li style="background-color: #A0D468;"></li>
+								<li style="background-color: #FFCE54;"></li>
+							</ul>
+						</div>
+						<div class="goumai">
+							<a class="buy">立即购买</a>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script>
+		var currentnum;
+			$(function(){	
+			 	var mySwiper = $('.swiper-container').swiper({
+			 		freeMode : false,
+			 		onSlideChangeStart: function(swiper){
+				    	$("#small li").eq(mySwiper.activeIndex).addClass("current").siblings().removeClass("current");
+				    }
+				});
+				$("#thumbs a").touchTouch();
+				$(".choseSize li").click(function(){
+					$(this).removeClass("unbuy");
+					$(this).addClass("buyed").siblings().removeClass("buyed");
+				})
+				$(".choseColor li").click(function(){
+					$(this).addClass("buyColor").siblings().removeClass("buyColor");
+				})
+				 $("#small li").bind("click",function(event){
+					 var num=$("#small li").index(this);
+					 mySwiper.slideTo(num,500, false);
+					 $(this).addClass("current").siblings().removeClass("current");
+				 });
+
+			})
+		</script>
+		<script type="text/JavaScript" src="js/touchTouch.js"></script>
+	</body>
+</html>
